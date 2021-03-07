@@ -1,0 +1,43 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Locations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Location" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LocationID" type="xs:int">
+              </xs:element>
+              <xs:element name="LocationName" type="xs:string"></xs:element>
+              <xs:element name="Address" type="xs:string"></xs:element>
+              <xs:element name="PostalCode" minOccurs="0" type="xs:string"></xs:element>
+              <xs:element name="PhoneNumber" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+              <xs:element name="Facilities" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Facility" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FacilityID" type="xs:string"></xs:element>
+                          <xs:element name="FacilityType" type="xs:string"></xs:element>
+                          <xs:element name="FacilityName" minOccurs="0" type="xs:string"></xs:element>
+                          <xs:element name="FacilityDisplayName" type="xs:string"></xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Intersections" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Intersection" minOccurs="1" maxOccurs="unbounded" type="xs:string"></xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
