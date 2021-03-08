@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="toronto-parks.xsl" type="text/xsl" ?>
 <!--open data retrieved from https://open.toronto.ca/dataset/parks-and-recreation-facilities/ -->
 <!--
   original file has been modified slightly to remove a namespace and standalone property that would make using this slightly harder for our purposes
